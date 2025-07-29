@@ -1,0 +1,29 @@
+.dialogContent {
+  max-width: 40rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.textarea {
+  min-height: 10rem;
+}
+
+.footer {
+  margin-top: var(--spacing-2);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

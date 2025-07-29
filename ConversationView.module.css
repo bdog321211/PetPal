@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--background);
+}
+
+.messagesList {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.messageRow {
+  display: flex;
+  gap: var(--spacing-2);
+  max-width: 75%;
+}
+
+.messageRow.sent {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.messageRow.received {
+  align-self: flex-start;
+}
+
+.messageBubble {
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.sent .messageBubble {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+.received .messageBubble {
+  background-color: var(--surface);
+  color: var(--surface-foreground);
+  box-shadow: var(--shadow);
+  border-bottom-left-radius: var(--radius-sm);
+}
+
+.messageContent {
+  margin: 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.messageTimestamp {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  display: block;
+  text-align: right;
+  margin-top: var(--spacing-1);
+  opacity: 0.8;
+}
+
+.sent .messageTimestamp {
+  color: color-mix(in srgb, var(--primary-foreground) 70%, transparent);
+}
+
+.inputArea {
+  padding: var(--spacing-3);
+  border-top: 1px solid var(--border);
+  background-color: var(--surface);
+}
+
+.form {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-3);
+}
+
+.textarea {
+  flex-grow: 1;
+  min-height: 2.5rem;
+  max-height: 10rem;
+  resize: none;
+}
+
+.loading,
+.error,
+.loadingMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--muted-foreground);
+}

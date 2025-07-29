@@ -1,0 +1,36 @@
+.form {
+  width: 100%;
+}
+
+.formItem {
+  margin-bottom: 0;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  position: relative;
+}
+
+.textarea {
+  flex-grow: 1;
+  padding-right: 3rem; /* Space for the button */
+  min-height: 2.5rem;
+  height: auto;
+  max-height: 120px;
+  overflow-y: auto;
+  background-color: var(--background);
+}
+
+.textarea:focus {
+  background-color: var(--card);
+}
+
+.submitButton {
+  position: absolute;
+  right: var(--spacing-2);
+  top: 50%;
+  transform: translateY(-50%);
+  flex-shrink: 0;
+}
