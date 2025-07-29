@@ -1,0 +1,241 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background);
+  padding: var(--spacing-4);
+  font-family: var(--font-family-base);
+}
+
+.authContainer {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.header {
+  text-align: center;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  text-decoration: none;
+  color: var(--foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.logoIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--primary);
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+  font-family: var(--font-family-heading);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.tabs {
+  width: 100%;
+}
+
+.tabsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  background-color: var(--muted);
+  border-radius: var(--radius);
+  padding: var(--spacing-1);
+  border-bottom: none;
+}
+
+.tabTrigger {
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: all var(--animation-duration-fast) ease-in-out;
+}
+
+.tabTrigger[data-state="active"] {
+  background-color: var(--surface);
+  color: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.tabTrigger:hover:not([data-state="active"]) {
+  background-color: color-mix(in srgb, var(--muted) 50%, var(--surface));
+}
+
+.tabContent {
+  padding-top: var(--spacing-6);
+}
+
+.testCredentials {
+  background-color: color-mix(in srgb, var(--info) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--info) 15%, transparent);
+  border-radius: var(--radius);
+  padding: var(--spacing-4);
+  font-size: 0.875rem;
+}
+
+.testCredentialsHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-weight: 600;
+  color: var(--info);
+  margin-bottom: var(--spacing-3);
+}
+
+.testCredentialsDescription {
+  margin: 0 0 var(--spacing-4) 0;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+}
+
+.testUsersList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.testUser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--animation-duration-fast) ease;
+}
+
+.testUser:hover {
+  border-color: color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.testUserInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.testUserHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-1);
+}
+
+.testUserEmail {
+  font-family: var(--font-family-monospace);
+  font-size: 0.8rem;
+  color: var(--foreground);
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.roleBadge {
+  font-size: 0.75rem;
+  padding: var(--spacing-1) var(--spacing-2);
+  flex-shrink: 0;
+}
+
+.testUserDescription {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+  line-height: 1.4;
+}
+
+.quickLoginButton {
+  flex-shrink: 0;
+  gap: var(--spacing-1);
+  font-size: 0.8rem;
+}
+
+.passwordNote {
+  padding: var(--spacing-2);
+  background-color: color-mix(in srgb, var(--muted) 30%, transparent);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+}
+
+.passwordNote strong {
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .authContainer {
+    max-width: 480px;
+    padding: var(--spacing-6);
+  }
+
+  .testUser {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-2);
+  }
+
+  .testUserHeader {
+    flex-wrap: wrap;
+  }
+
+  .testUserEmail {
+    font-size: 0.75rem;
+  }
+
+  .quickLoginButton {
+    align-self: center;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .authContainer {
+    padding: var(--spacing-4);
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .logoIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .testUserEmail {
+    font-size: 0.7rem;
+  }
+
+  .roleBadge {
+    font-size: 0.7rem;
+  }
+}

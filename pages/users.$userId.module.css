@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.separator {
+  margin: var(--spacing-4) 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-6);
+}
+
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: var(--spacing-6);
+  justify-content: center;
+}
+
+.emptyMessage {
+  background-color: var(--surface);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-16) var(--spacing-6);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  gap: var(--spacing-4);
+}
+
+.errorIcon {
+  color: var(--error);
+}
+
+.errorTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.errorMessage {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  max-width: 500px;
+  margin: 0;
+}
+
+.cardSkeleton {
+  height: 350px;
+  border-radius: var(--radius-lg);
+}
+
+.postSkeleton {
+  height: 500px;
+  border-radius: var(--radius-lg);
+}

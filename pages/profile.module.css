@@ -1,0 +1,58 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.pageHeader {
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.pageHeader h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.pageHeader p {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.tabs {
+  width: 100%;
+}
+
+.tabContent {
+  padding-top: var(--spacing-6);
+}
+
+/* Skeleton Styles */
+.skeletonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  padding: var(--spacing-6);
+  background-color: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.skeletonHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.skeletonHeaderText {
+  flex-grow: 1;
+}
+
+.skeletonForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
